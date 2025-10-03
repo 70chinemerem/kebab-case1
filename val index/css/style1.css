@@ -1,0 +1,70 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+    }
+
+    header {
+        text-align: none;
+        background: none;
+        padding: 10px 25px;
+    }
+    h1 {
+        font-size: 2.5rem;
+        color: white;
+        padding: 0.1px 5px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        color: white;
+    }
+
+    .project {
+        color: white;
+        padding: 8px;
+    }
+    .project{
+        color: white;
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+        background: none;
+    }
+    /* Navigation Menu Styles */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: blue;
+      text-decoration: none;
+      font-weight: bold;
+    }
+     /* Mobile Styles */
+    @media (max-width: 768px){
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
