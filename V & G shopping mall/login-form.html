@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Form with Hamburger Menu</title>
+  <title>V & G-Login</title>
   <style>
+    body{
+      background-image: url("../assets/background.jpeg/971.jpeg");
     /* Reset some styles */
     * {
       box-sizing: border-box;
@@ -113,51 +115,37 @@
         display: flex;
       }
     }
+  }
   </style>
 </head>
 <body>
-
-  <header>
-    <nav class="nav">
-      <div class="logo">V & G</div>
-      <div class="hamburger" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="nav-links" id="nav-links">
-        <a href="file:///Users/chinemeremv/Desktop/html/my%20projects/val/my%20p/css%20pr/home%20page.html">home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-    </nav>
-  </header>
-
+  <div class="logo"> V & G</div>
   <div class="container">
-    <h1>Login</h1>
-    <form action="" method="login">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"  placeholder="username" required/>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="valnyeiind@gmail.com" required/>
-
-        <label for="pass">Password:</label>
-        <input type="password" id="pass" name="pass" maxlength="9" placeholder="password" required/>
-
-        <label for="phone">phone#:</label>
-        <input type="tel" id="phone" name="phone" placeholder="(123)-456-7890"required/>
-    <button type="submit">Login</button>
+    <h2> Login</h2><br>
+    <form action="/login" method="POST">
+      <input type="text" name="username" placeholder="Username or Email" required><br>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button><br>
+      <p>Don't have an account? <a href="file:///Users/chinemeremv/Desktop/kebab-case/V%20&%20G%20shopping%20mall/register.html#">Register</a></p>
     </form>
   </div>
 
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+    // Add event listener for form submit
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent form from submitting normally
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Simple check (you can replace this with real authentication)
+      if(username === "chinemerem" && password === "12345") {
+        // Redirect to another page after successful login
+        window.location.href = "main-page.html";
+      } else {
+        alert("Invalid username or password");
+      }
     });
-  </script>
+    </script>
 </body>
 </html>
